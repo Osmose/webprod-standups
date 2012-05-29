@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Webprod Standups</title>
+  </head>
+  <body>
+    <ul id="messages">
+    </ul>
+
+    <script id="message" type="text/html">
+      <li>
+        <div class="mugshot"><img src="{{ mugshot_href }}"></div>
+        <div class="name">{{ name }}</div>
+        <p>{{{ body }}}</p>
+      </li>
+    </script>
+
+    <script src="//code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="//assets.yammer.com/platform/yam.js"></script>
+    <script src="ICanHaz.min.js"></script>
+    <script src="config.js"></script>
+    <script src="standup.js"></script>
+  </body>
+</html>
