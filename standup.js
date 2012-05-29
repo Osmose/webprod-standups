@@ -5,6 +5,8 @@
     // zomg global variables
     var references = {};
 
+    var converter = Markdown.getSanitizingConverter();
+
     yam.config({appId: config.appId});
 
     // Login!
@@ -62,7 +64,7 @@
             $messages.append(ich.message({
                 name: sender.full_name,
                 mugshot_href: sender.mugshot_url,
-                body: msg.body.rich
+                body: converter.makeHtml(msg.body.plain)
             }));
         }
     }
