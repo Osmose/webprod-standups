@@ -67,5 +67,15 @@
                 body: converter.makeHtml(msg.body.plain)
             }));
         }
+
+        // Remove progress bar.
+        $('#progress').fadeOut(500, function() {
+            $messages
+                .fadeIn(500)
+                .masonry({
+                    itemSelector : '.message',
+                    columnWidth : 470
+                });
+        });
     }
 })(jQuery, yam, config);

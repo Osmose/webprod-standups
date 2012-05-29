@@ -2,27 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Webprod Standups</title>
+    <title>Websites Standups</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/standup.css" rel="stylesheet">
   </head>
   <body>
-    <ul id="messages">
-    </ul>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a href="#" class="brand">Websites Standups</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <div id="progress" class="progress progress-striped active">
+            <div class="bar"></div>
+          </div>
+
+          <ul id="messages"></ul>
+        </div>
+      </div>
+    </div>
 
     <script id="message" type="text/html">
-      <li>
+      <li class="well message">
         <div class="mugshot"><img src="{{ mugshot_href }}"></div>
-        <div class="name">{{ name }}</div>
-        <p>{{{ body }}}</p>
+        <h1 class="name">{{ name }}</h1>
+        <p class="body">{{{ body }}}</p>
       </li>
     </script>
 
     <script src="//code.jquery.com/jquery-1.7.2.min.js"></script>
     <script src="//assets.yammer.com/platform/yam.js"></script>
-    <script src="lib/ICanHaz.min.js"></script>
-    <script src="lib/pagedown/Markdown.Converter.js"></script>
-    <script src="lib/pagedown/Markdown.Sanitizer.js"></script>
+    <script src="js/lib/ICanHaz.min.js"></script>
+    <script src="js/lib/pagedown/Markdown.Converter.js"></script>
+    <script src="js/lib/pagedown/Markdown.Sanitizer.js"></script>
+    <script src="js/lib/jquery.masonry.min.js"></script>
 
     <script src="config.js"></script>
-    <script src="standup.js"></script>
+    <script src="js/standup.js"></script>
   </body>
 </html>
