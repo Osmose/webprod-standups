@@ -101,6 +101,7 @@
 
     $(function() {
         var $my_standup = $('#my-standup');
+        $('#post-button').attr('disabled', '');
 
         $('#standup-body').on('change keydown keyup', function(e) {
             $('#preview').empty().append(ich.message({
