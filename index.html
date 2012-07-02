@@ -16,23 +16,55 @@
     </div>
 
     <div class="container">
-      <div class="row">
+      <div id="progress" class="progress progress-striped active">
+        <div class="bar"></div>
+      </div>
+
+      <div id="app-container" class="row">
         <div class="span12">
-          <div id="progress" class="progress progress-striped active">
-            <div class="bar"></div>
+          <div id="my-standup">
+            <div class="row">
+              <div class="span12">
+                <p class="alert alert-info">
+                  You don't appear to have submitted a standup for this day! Use the form below to enter one.
+                </p>
+              </div>
+            </div>
+
+            <div class="row">
+              <form id="standup-form" class="span6">
+                <div class="well">
+                <label for="standup-body">Standup</label>
+                <textarea id="standup-body">## Blockers
+- None
+
+## Yesterday
+- Nothing
+
+## Today
+- Nothing</textarea>
+                <button id="post-button" class="btn btn-success" type="submit">
+                  <i class="icon-pencil icon-white"></i> Post
+                </button>
+              </div>
+              </form>
+
+              <div id="preview" class="span6"></div>
+            </div>
           </div>
 
-          <ul id="messages"></ul>
+          <h1>Team Standups for Today</h1>
+          <div id="messages"></div>
         </div>
       </div>
     </div>
 
     <script id="message" type="text/html">
-      <li class="well message">
+      <div class="well message">
         <div class="mugshot"><img src="{{ mugshot_href }}"></div>
         <h1 class="name">{{ name }}</h1>
         <p class="body">{{{ body }}}</p>
-      </li>
+      </div>
     </script>
 
     <script src="//code.jquery.com/jquery-1.7.2.min.js"></script>
